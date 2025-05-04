@@ -69,12 +69,10 @@ end
 -- [[ Rendering ]] --
 RunService.RenderStepped:Connect(function()
     if ForceHit.Enabled then
-        -- Update FOV Circle Position and Visibility
         Fov.Visible = ForceHit.FOV.Visible
         Fov.Position = UserInput:GetMouseLocation()
         Fov.Radius = ForceHit.FOV.Radius
 
-        -- Update Player Highlighting
         local ClosestPart, ClosestCharacter = GetClosestPlayer()
         if ClosestPart then
             Highlight.Adornee = ClosestCharacter
@@ -88,7 +86,7 @@ RunService.RenderStepped:Connect(function()
     end
 end)
 
--- [[ Keybind Handling ]] --
+-- Keybind Handling
 UserInput.InputBegan:Connect(function(Input, GameProcessed)
     if not GameProcessed and Input.KeyCode == ForceHit.Keybind then
         ForceHit.Enabled = not ForceHit.Enabled
@@ -96,5 +94,5 @@ UserInput.InputBegan:Connect(function(Input, GameProcessed)
     end
 end)
 
--- Return ForceHit Table
+-- Return the ForceHit table so other scripts can use it
 return ForceHit
