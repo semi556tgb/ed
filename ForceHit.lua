@@ -96,5 +96,5 @@ UserInput.InputBegan:Connect(function(Input, GameProcessed)
     end
 end)
 
--- Return the ForceHit table so it can be accessed in other scripts
+-- Return ForceHit Table
 return ForceHit
