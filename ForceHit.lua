@@ -96,5 +96,5 @@ UserInput.InputBegan:Connect(function(Input, GameProcessed)
     end
 end)
 
--- Return ForceHit for use in main.lua
+-- Return ForceHit table so it can be accessed in other scripts
 return ForceHit
