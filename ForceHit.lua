@@ -41,7 +41,6 @@ Highlight.OutlineTransparency = 0
 Highlight.Enabled = false
 
 -- [[ Functions ]] --
-
 local function GetClosestPlayer()
     local ClosestDistance, ClosestPart, ClosestCharacter = nil, nil, nil
     local MousePosition = UserInput:GetMouseLocation()
